@@ -1,0 +1,71 @@
+@mixin l {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+.order-page {
+  min-height: 100vh;
+  position: relative;
+
+  .arrow-icon {
+    display: none;
+
+    @include l {
+      display: block;
+      position: absolute;
+      top: 16%;
+      left: -5rem;
+      width: 8rem;
+    }
+  }
+
+  form {
+    margin: 4rem 0;
+    background-color: rgba(255, 216, 255, 0.4);
+    padding: 3.3rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%),
+      0 1px 3px 0 rgb(0 0 0 / 12%);
+
+    .submit-btn {
+      background-color: rgb(110, 57, 110);
+      color: white;
+      border: 1px solid transparent;
+
+      &:hover {
+        background-color: rgba(150, 149, 150, 0.4);
+        color: rgb(29, 28, 29);
+        border: 1px solid purple;
+      }
+
+      &:disabled {
+        background-color: rgb(94, 94, 94);
+        color: rgb(210, 208, 208);
+      }
+    }
+
+    input.invalid {
+      border: 1px solid red;
+    }
+
+    .error-block {
+      color: rgb(206, 11, 11);
+      font-size: 0.8rem;
+      margin: 0.5rem 0 0.5rem 0.3rem;
+    }
+  }
+}
+
+:host ::ng-deep .p-confirm-dialog {
+  .p-confirm-dialog-reject.p-button, .p-confirm-dialog-accept.p-button {
+    background-color: rgb(110, 57, 110) !important;
+    color: white !important;
+    box-shadow: none !important;
+
+    &:hover {
+      background-color: rgba(150, 149, 150, 0.4) !important;
+      color:rgb(29, 28, 29) !important;
+    }
+  }
+}

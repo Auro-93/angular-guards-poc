@@ -1,0 +1,26 @@
+@mixin tablet {
+  @media screen and (min-width: 800px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+.grid-layout {
+  display: grid;
+  justify-items: center;
+  padding: 1rem 0;
+  grid-template-columns: repeat(1, 1fr);
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include desktop() {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,29 @@
+:host ::ng-deep .p-fieldset{
+    margin-top: 1rem;
+    .p-fieldset-legend-text{
+        font-size: 1.3rem !important;
+        color: purple !important;
+    }
+
+    .p-element{
+        background-color: rgb(255, 241, 255);
+    }
+    .p-fieldset-content{
+        padding: 0.6rem !important;
+        font-size: 0.8rem !important;
+        display: flex;
+        flex-direction: column;
+
+        .price-tag{
+            background-color: rgb(241, 218, 241);
+            align-self: flex-end;
+            padding: 0.4rem;
+            border: 1px solid purple;
+            border-radius: 4px;
+            margin: 0;
+            font-weight: bold;
+        }
+
+
+    }
+} 

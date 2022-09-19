@@ -1,0 +1,26 @@
+<nav class="d-flex justify-content-around" *ngIf="!(showMenu$ | async)">
+  <p-tabMenu [model]="items" [activeItem]="activeItem">
+    <ng-template pTemplate="item" let-item let-i="index">
+      {{ item.label }}
+    </ng-template>
+  </p-tabMenu>
+
+  <button type="button" class="btn auth-btn" (click)="onAuth($event)">
+    {{ (isLoggedIn$ | async) ? "Logout" : "Login" }}
+  </button>
+</nav>
+
+<nav class="d-flex justify-content-center" *ngIf="(showMenu$ | async)">
+  <p-tabMenu [model]="items" [activeItem]="activeItem">
+    <ng-template pTemplate="item" let-item let-i="index">
+      <img [src]="item.icon" [alt]="item.label"  width="30px">
+    </ng-template>
+  </p-tabMenu>
+
+  <button type="button" class="btn auth-btn" (click)="onAuth($event)">
+    {{ (isLoggedIn$ | async) ? "Logout" : "Login" }}
+  </button>
+</nav>
+
+
+

@@ -1,0 +1,26 @@
+:host
+  ::ng-deep .p-card{
+    width: 20rem;
+    background-color: transparent;
+    position: relative;
+    padding: 2rem 1rem;
+    margin: 1rem 0.6rem;
+
+    .p-card-body{
+        width: 100%;
+    }
+
+    .p-skeleton{
+        background-color: rgba(255, 216, 255, 1);
+    }
+
+
+    .tag-placeholder{
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      width: 42px;
+      height: 18px;
+    }
+  }
+

@@ -1,0 +1,58 @@
+<div class="container p-5 d-flex flex-column order-page"> 
+  <p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+  <p-toast position="top-left" life="3000" closable="true" styleClass="success-toast" [showTransformOptions]="'translateX(-100%)'"></p-toast>
+
+    <div class="container">
+    <div class="row d-flex align-items-center">
+    <form class="col col-12 col-lg-6" [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+        <div class="form-group mb-3">
+          <input 
+            type="text" 
+            class="form-control" 
+            placeholder="Address" 
+            name="address" 
+            formControlName="address"
+            [class.invalid]="orderForm.get('address')?.invalid && 
+            (orderForm.get('address')?.dirty || orderForm.get('address')?.touched)"
+            >
+            <div class="error-block" *ngIf="orderForm.get('address')?.hasError('required') && orderForm.get('address')?.touched">Address is required</div>
+        </div>
+        <div class="form-group mb-3">
+          <input 
+            type="text" 
+            class="form-control" 
+            placeholder="City" 
+            name="city" 
+            formControlName="city"
+            [class.invalid]="orderForm.get('city')?.invalid && 
+            (orderForm.get('city')?.dirty || orderForm.get('city')?.touched)"
+          >
+          <div class="error-block" *ngIf="orderForm.get('city')?.hasError('required') && orderForm.get('city')?.touched">City is required</div>
+        </div>
+        <div class="form-group mb-5">
+          <input 
+            type="text" 
+            class="form-control"  
+            placeholder="Country" 
+            name="country" 
+            formControlName="country"
+            [class.invalid]="orderForm.get('country')?.invalid && 
+            (orderForm.get('country')?.dirty || orderForm.get('country')?.touched)"
+            >
+            <div class="error-block" *ngIf="orderForm.get('country')?.hasError('required') && orderForm.get('country')?.touched">Country is required</div>
+        </div>
+     
+       
+        <button type="submit" class="btn btn-primary submit-btn" [disabled]="orderForm.invalid">Submit</button>
+      
+      </form>
+
+      <div class="col col-12 col-lg-6">
+        <div class="d-flex flex-wrap justify-content-center" >
+          <app-book *ngFor="let book of orderedBooks$ | async" [book]="book" [isFavourite]="isFavourite" [isInCart]="isInCart"></app-book>
+          <app-skeleton-loader *ngIf="loading" [loadingPlaceholderNum]="loadingPlaceholderNum"></app-skeleton-loader>
+      </div>
+      </div>
+    </div>
+  </div>
+</div> 

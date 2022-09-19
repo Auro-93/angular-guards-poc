@@ -1,0 +1,36 @@
+:host ::ng-deep .p-card {
+  position: relative;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  margin: 1rem 0.6rem;
+  width: 20rem;
+  z-index: -1;
+  background-color: rgb(255, 244, 255);
+
+  .p-card-title {
+    text-align: center;
+    color: rgb(102, 48, 102);
+  }
+
+  .p-tag {
+    background-color: rgb(220, 125, 220);
+    padding: 0.5rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    border: 1px solid purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon{
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+  }
+}

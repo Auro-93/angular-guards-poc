@@ -1,0 +1,23 @@
+<div class="container d-flex flex-wrap p-5 books-page flex-column">
+  <div class="d-flex flex-column flex-xl-row align-items-center align-items-xl-start">
+    <div class="side-menu col col-10 col-xl-3 col-xxl-2 order-2 order-xl-1">
+      <p-menu [model]="items"></p-menu>
+      <router-outlet></router-outlet>
+    </div>
+    <div
+      class="col-12 col-xl-9 col-xxl-10 order-1 order-xl-2 d-flex flex-wrap justify-content-center"
+    >
+      <app-book
+        *ngFor="let book of books$ | async"
+        [book]="book"
+        [isFavourite]="isFavourite"
+        [isInCart]="isInCart"
+      ></app-book>
+
+      <app-skeleton-loader
+        *ngIf="loading"
+        [loadingPlaceholderNum]="loadingPlaceholderNum"
+      ></app-skeleton-loader>
+    </div>
+  </div>
+</div>

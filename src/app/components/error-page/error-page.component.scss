@@ -1,0 +1,16 @@
+.error-page{
+    min-height: 82.8vh;
+
+    .error-container{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .error-msg{
+            margin: 2rem 0;
+            color: rgb(129, 93, 129)
+        }
+    }
+}

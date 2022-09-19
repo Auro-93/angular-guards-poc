@@ -1,0 +1,28 @@
+<div class="container p-5 d-flex flex-column align-items-center home-page">
+  <div
+    *ngIf="bookGenres"
+    class="d-flex flex-wrap justify-content-center book-genres-container"
+  >
+ 
+    <app-genre-card
+      *ngFor="let genre of bookGenres"
+      [genre]="genre"
+    ></app-genre-card>
+  </div>
+
+  <ng-container *ngIf="books">
+    <app-grid>
+      <app-book
+        *ngFor="let book of books"
+        [book]="book"
+        [isFavourite]="isFavourite"
+        [isInCart]="isInCart"
+      ></app-book>
+    </app-grid>
+  </ng-container>
+
+  <app-skeleton-loader
+    *ngIf="loading"
+    [loadingPlaceholderNum]="loadingPlaceholderNum"
+  ></app-skeleton-loader>
+</div>

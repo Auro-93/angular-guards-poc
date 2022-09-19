@@ -1,0 +1,19 @@
+<p-card [id]="book.id" header="{{ book.title }}">
+  <ng-template pTemplate="header">
+    <img [alt]="book.title" [src]="book.image" [style]="{ width: '4rem' }" />
+  </ng-template>
+
+  <p>
+    {{ book.description }}
+  </p>
+
+  <p-tag [value]="book.genre"></p-tag>
+
+  <ng-container *ngIf="isFavourite">
+    <img src="./assets/images/heart-fill-icon.png" alt="heart-fill-icon" width="40px" class="heart-fill-icon icon">
+  </ng-container>
+
+  <ng-container *ngIf="isInCart">
+    <img src="./assets/images/cart-icon.png" alt="cart-icon" width="40px" class="cart-icon icon">
+  </ng-container>
+</p-card>

@@ -1,0 +1,10 @@
+[
+  { "name": "Classics", "slug": "classics" },
+  { "name": "Adventure", "slug": "adventure" },
+  { "name": "Science Fiction", "slug": "science-fiction" },
+  { "name": "Horror", "slug": "horror" },
+  { "name": "Thriller", "slug": "thriller" },
+  { "name": "Essays", "slug": "essays" },
+  { "name": "Short Stories", "slug": "short-stories" },
+  { "name": "Biographies", "slug": "biographies" }
+]

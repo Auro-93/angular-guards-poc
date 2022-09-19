@@ -1,0 +1,11 @@
+<div class="container p-5 genre-page">
+  <app-grid>
+    <app-book
+      *ngFor="let book of books$ | async"
+      [book]="book"
+      [isFavourite]="isFavourite"
+      [isInCart]="isInCart"
+    ></app-book>
+  </app-grid>
+
+</div>

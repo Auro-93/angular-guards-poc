@@ -1,0 +1,50 @@
+[
+    {
+        "id": "6",
+        "title": "Book 6",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed lacinia orci. Phasellus venenatis purus convallis mi iaculis, nec lobortis nulla blandit. Aenean mattis leo eu mauris condimentum euismod. Integer justo enim, gravida aliquam porttitor eget, elementum ultrices elit. Aliquam ullamcorper risus neque, ut bibendum nisl faucibus et.",
+        "genre": "Short Stories",
+        "genreSlug": "short-stories",
+        "image": "./assets/images/book-cover.png"
+    },
+    {
+        "id": "7",
+        "title": "Book 7",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed lacinia orci. Phasellus venenatis purus convallis mi iaculis, nec lobortis nulla blandit. Aenean mattis leo eu mauris condimentum euismod. Integer justo enim, gravida aliquam porttitor eget, elementum ultrices elit. Aliquam ullamcorper risus neque, ut bibendum nisl faucibus et.",
+        "genre": "Science Fiction",
+        "genreSlug": "science-fiction",
+        "image": "./assets/images/book-cover.png"
+    },
+    {
+        "id": "8",
+        "title": "Book 8",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed lacinia orci. Phasellus venenatis purus convallis mi iaculis, nec lobortis nulla blandit. Aenean mattis leo eu mauris condimentum euismod. Integer justo enim, gravida aliquam porttitor eget, elementum ultrices elit. Aliquam ullamcorper risus neque, ut bibendum nisl faucibus et.",
+        "genre": "Classics",
+        "genreSlug": "classics",
+        "image": "./assets/images/book-cover.png"
+    },
+    {
+        "id": "9",
+        "title": "Book 9",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed lacinia orci. Phasellus venenatis purus convallis mi iaculis, nec lobortis nulla blandit. Aenean mattis leo eu mauris condimentum euismod. Integer justo enim, gravida aliquam porttitor eget, elementum ultrices elit. Aliquam ullamcorper risus neque, ut bibendum nisl faucibus et.",
+        "genre": "Adventure",
+        "genreSlug": "adventure",
+        "image": "./assets/images/book-cover.png"
+    },
+    {
+        "id": "10",
+        "title": "Book 10",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed lacinia orci. Phasellus venenatis purus convallis mi iaculis, nec lobortis nulla blandit. Aenean mattis leo eu mauris condimentum euismod. Integer justo enim, gravida aliquam porttitor eget, elementum ultrices elit. Aliquam ullamcorper risus neque, ut bibendum nisl faucibus et.",
+        "genre": "Thriller",
+        "genreSlug": "thriller",
+        "image": "./assets/images/book-cover.png"
+    },
+    {
+        "id": "11",
+        "title": "Book 11",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed lacinia orci. Phasellus venenatis purus convallis mi iaculis, nec lobortis nulla blandit. Aenean mattis leo eu mauris condimentum euismod. Integer justo enim, gravida aliquam porttitor eget, elementum ultrices elit. Aliquam ullamcorper risus neque, ut bibendum nisl faucibus et.",
+        "genre": "Science Fiction",
+        "genreSlug": "science-fiction",
+        "image": "./assets/images/book-cover.png"
+    }
+]

@@ -1,0 +1,84 @@
+@mixin mobile {
+  @media screen and (max-width: 800px) {
+    @content;
+  }
+}
+
+
+@mixin desktop {
+  @media screen and (min-width: 801px) {
+    @content;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(253, 238, 253);
+}
+
+:host
+  ::ng-deep
+  .p-tabmenu
+  .p-tabmenu-nav
+  .p-tabmenuitem
+  .p-menuitem-link:not(.p-disabled):focus {
+  box-shadow: none;
+}
+
+:host ::ng-deep .p-tabmenu-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(253, 238, 253) !important;
+
+  .p-menuitem-link {
+    background-color: rgb(253, 238, 253) !important;
+    border-color: transparent !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+
+    @include mobile{
+      &:hover {
+        transform: scale(1.5);
+      }
+  
+
+    }
+
+  
+    @include desktop {
+      width: 8rem;
+
+      &:hover {
+        background-color: rgb(247, 203, 247) !important;
+        color: rgb(30, 29, 29) !important;
+        border-top-right-radius: 50% !important;
+        border-top-left-radius: 50% !important;
+      }
+    }
+  }
+
+  .p-menuitem-link-active {
+    @include desktop {
+      background-color: rgb(240, 177, 240) !important;
+      color: white !important;
+      border-top-right-radius: 50% !important;
+      border-top-left-radius: 50% !important;
+      border-bottom: 3px solid rgb(110, 57, 110) !important;
+    }
+  }
+}
+
+.auth-btn {
+  background-color: rgb(110, 57, 110);
+  color: white;
+  width: 5rem;
+
+  &:hover {
+    background-color: rgba(150, 149, 150, 0.4);
+  }
+}

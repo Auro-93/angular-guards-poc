@@ -1,0 +1,41 @@
+@mixin l {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+.books-page {
+  min-height: 100vh;
+  position: relative;
+
+  .arrow-icon {
+    display: none;
+
+    @include l {
+      display: block;
+      position: absolute;
+      top: 2.5%;
+      left: -5rem;
+      width: 8rem;
+    }
+  }
+
+  .side-menu {
+    background-color: rgba(255, 216, 255, 0.4);
+    border-right: 1px solid violet;
+  }
+}
+
+:host ::ng-deep .p-menu{
+  width: 100%;
+
+  .p-menuitem {
+    transition: all 0.3s linear !important;
+    :hover {
+      background-color: rgba(255, 216, 255, 1) !important;
+    }
+
+}
+
+}
+

@@ -1,0 +1,22 @@
+@mixin l {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+.genre-page {
+  min-height: 100vh !important;
+  position: relative;
+
+  .arrow-icon {
+    display: none;
+
+    @include l {
+      display: block;
+      position: absolute;
+      left: -5rem;
+      top: 1%;
+      width: 8rem;
+    }
+  }
+}

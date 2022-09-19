@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+input:focus{
+    box-shadow: rgba(55, 6, 43, 0.7) 0px 1px 1px, rgba(131, 19, 127, 0.5) 0px 0px 1px 1px !important;
+    border: 1px solid violet !important;
+}
+
+body{
+    overflow-x: hidden;
+}
+

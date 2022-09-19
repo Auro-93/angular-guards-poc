@@ -1,0 +1,14 @@
+<div  class="d-flex justify-content-center container flex-wrap">
+    <p-card *ngFor="let card of cards">
+        <div class="d-flex flex-column align-items-center">
+            <p-skeleton shape="rectangle" styleClass="my-2" width="64px" height="95px"></p-skeleton>
+            <p-skeleton shape="rectangle" width="8rem" styleClass="mb-4 mt-2"></p-skeleton>
+       
+        </div>
+        <p-skeleton width="100%" height="150px"></p-skeleton>
+
+        <p-skeleton shape="rectangle" styleClass="mb-4 mt-2" class="tag-placeholder"></p-skeleton>
+      
+    </p-card>
+
+</div>
