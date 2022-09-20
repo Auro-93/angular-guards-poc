@@ -61,6 +61,7 @@ export class OrderPageComponent implements OnInit, CanComponentDeactivate {
   onSubmit() {
     if (this.orderForm.valid) {
       this.addSingle();
+      this.orderForm.reset()
     }
   }
 
