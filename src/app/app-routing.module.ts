@@ -16,8 +16,8 @@ import { CanActivateChildGuard } from './services/guards/can-activate-child-guar
 
 const routes: Routes = [
   
-    { path: '', pathMatch: 'full', redirectTo: 'home' },
-    { path: 'home',  component: HomePageComponent },
+    { path: '', pathMatch: 'full',  component: HomePageComponent },
+    { path: 'home',  redirectTo: '' },
     { path: 'books', component: BooksPageComponent, canActivateChild: [CanActivateChildGuard], children: [
       {path: 'buy-again', component: BuyAgainPageComponent},
       {path: 'recommended', component: RecommendedPageComponent},

@@ -15,6 +15,6 @@ export class CanDeactivateGuard
   canDeactivate(
     component: CanComponentDeactivate,
   ):  Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree  {
-    return component.canDeactivate();
+    return component.canDeactivate()
   }
 }

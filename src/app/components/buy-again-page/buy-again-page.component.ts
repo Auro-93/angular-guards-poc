@@ -1,16 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { filter, Subscription } from 'rxjs';
 import { Order } from 'src/app/models/Order';
 import { AuthService } from 'src/app/services/auth.service';
-import { BooksService } from 'src/app/services/books.service';
+
 
 @Component({
   selector: 'app-buy-again-page',
   templateUrl: './buy-again-page.component.html',
   styleUrls: ['./buy-again-page.component.scss'],
 })
-export class BuyAgainPageComponent implements OnInit {
+export class BuyAgainPageComponent implements OnInit, OnDestroy{
   orders: Order[] = [
     {
       title: 'Order 1',
@@ -46,5 +46,9 @@ export class BuyAgainPageComponent implements OnInit {
     this.subscription = this.authService.loggedIn$
       .pipe(filter((auth) => !auth))
       .subscribe(() => this.router.navigate(['/books']));
+  }
+
+  ngOnDestroy(): void {
+      this.subscription?.unsubscribe()
   }
 }

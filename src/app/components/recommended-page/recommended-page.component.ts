@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { filter, map, Observable, Subscription } from 'rxjs';
 import { Book } from 'src/app/models/Book';
@@ -10,7 +10,7 @@ import { BooksService } from 'src/app/services/books.service';
   templateUrl: './recommended-page.component.html',
   styleUrls: ['./recommended-page.component.scss']
 })
-export class RecommendedPageComponent implements OnInit {
+export class RecommendedPageComponent implements OnInit, OnDestroy {
 
   books$: Observable<Book[]> | undefined;
   subscription: Subscription | undefined;
@@ -26,6 +26,10 @@ export class RecommendedPageComponent implements OnInit {
     this.subscription = this.authService.loggedIn$
     .pipe(filter((auth) => !auth))
     .subscribe(() => this.router.navigate(['/books']));
+  }
+
+  ngOnDestroy(): void {
+      this.subscription?.unsubscribe()
   }
 
 }

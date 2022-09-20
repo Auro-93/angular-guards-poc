@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RecommendedPageModule } from './components/recommended-page/recommended-page.module';
 import { BuyAgainPageModule } from './components/buy-again-page/buy-again-page.module';
 
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
