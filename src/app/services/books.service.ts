@@ -29,7 +29,7 @@ export class BooksService {
     return this.http.get<Genre[]>(this.genresEndpoint);
   }
 
-  public getBooksBelongingToAGenre(genre: string | null) {
+  public getBooksBelongingToAGenre(genre: string ) {
     return this.getBooks().pipe(
       map((books) => books.filter((book) => book.genreSlug === genre))
     );

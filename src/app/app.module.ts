@@ -27,7 +27,6 @@ import { BuyAgainPageModule } from './components/buy-again-page/buy-again-page.m
     BooksPageModule,
     HomePageModule,
     ErrorPageModule,
-    FavouritesPageModule,
     RecommendedPageModule,
     BuyAgainPageModule,
     AppRoutingModule,

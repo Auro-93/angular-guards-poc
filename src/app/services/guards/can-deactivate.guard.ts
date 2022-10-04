@@ -8,6 +8,7 @@ export interface CanComponentDeactivate {
   canDeactivate: () =>  Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree;
 }
 
+
 @Injectable({providedIn: 'root'})
 export class CanDeactivateGuard
   implements CanDeactivate<CanComponentDeactivate>
@@ -15,6 +16,7 @@ export class CanDeactivateGuard
   canDeactivate(
     component: CanComponentDeactivate,
   ):  Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree  {
+    
     return component.canDeactivate()
   }
 }

@@ -1,27 +1,25 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { map, Subscription } from 'rxjs';
+import { filter, map, Observable, of, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-error-page',
   templateUrl: './error-page.component.html',
-  styleUrls: ['./error-page.component.scss']
+  styleUrls: ['./error-page.component.scss'],
 })
-export class ErrorPageComponent implements OnInit, OnDestroy {
+export class ErrorPageComponent implements OnInit {
+  error$: Observable<string> | undefined;
 
-  error: string = "Ooops! The page you're looking for doesn't exist";
-  subscription: Subscription | undefined;
-  
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-
-   this.subscription = this.route.params.pipe(map(param =>JSON.parse(param['error']))).subscribe((param) => this.error = param)
-  }
-
-  ngOnDestroy(): void {
-     this.subscription?.unsubscribe() 
+    this.error$ = this.route.params
+      .pipe(
+        map(param => {
+          return param['error'] ? JSON.parse(param['error']) : "Ooops! The page you're looking for doesn't exist"
+        })
+      )
   }
 
 }

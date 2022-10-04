@@ -15,7 +15,7 @@ export class BookGenrePageComponent implements OnInit {
   books$ : Observable<Book[]> | undefined;
   isFavourite: boolean = false;
   isInCart: boolean = false;
-  loadingPlaceholderNum: number = 6;
+
 
   constructor(private route: ActivatedRoute) {
    }
